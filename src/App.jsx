@@ -1,7 +1,11 @@
+import { CssBaseline, Typography } from "@mui/material";
+
 function App() {
   return (
-    <div>App</div>
-  )
+    <CssBaseline>
+      <Typography>App</Typography>
+    </CssBaseline>
+  );
 }
 
-export default App
+export default App;
