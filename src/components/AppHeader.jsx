@@ -16,7 +16,7 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 
-export default function AppHeader() {
+export default function AppHeader({ collapsedSidebar, setCollapsedSidebar }) {
   const [anchorEl, setAnchorEl] = useState(null);
   const isMenuOpen = !!anchorEl;
 
@@ -28,7 +28,10 @@ export default function AppHeader() {
   return (
     <AppBar position="sticky" sx={styles.appBar}>
       <Toolbar>
-        <IconButton color="secondary" onClick={() => console.log("logo")}>
+        <IconButton
+          color="secondary"
+          onClick={() => setCollapsedSidebar(!collapsedSidebar)}
+        >
           <MenuTwoTone />
         </IconButton>
         <Box ml={2}>

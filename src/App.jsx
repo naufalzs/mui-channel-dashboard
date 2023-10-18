@@ -6,14 +6,23 @@ import "@fontsource/roboto/700.css";
 import theme from "./config/theme";
 import Sidenav from "./components/Sidenav";
 import AppHeader from "./components/AppHeader";
+import { useState } from "react";
 
 function App() {
+  const [collapsedSidebar, setCollapsedSidebar] = useState(false);
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline>
-        <AppHeader />
+        <AppHeader
+          collapsedSidebar={collapsedSidebar}
+          setCollapsedSidebar={setCollapsedSidebar}
+        />
         <Box sx={styles.container}>
-          <Sidenav />
+          <Sidenav
+            collapsedSidebar={collapsedSidebar}
+            setCollapsedSidebar={setCollapsedSidebar}
+          />
           <Box component={"main"}></Box>
         </Box>
       </CssBaseline>
