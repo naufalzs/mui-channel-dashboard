@@ -6,9 +6,11 @@ import {
 } from "@mui/icons-material";
 import { Avatar, Box, Typography, useTheme } from "@mui/material";
 import { Menu, MenuItem, Sidebar } from "react-pro-sidebar";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Sidenav({ collapsedSidebar, setCollapsedSidebar }) {
   const theme = useTheme();
+  const location = useLocation();
 
   return (
     <Sidebar
@@ -37,17 +39,43 @@ export default function Sidenav({ collapsedSidebar, setCollapsedSidebar }) {
           </>
         )}
       </Box>
-      <Menu>
-        <MenuItem active icon={<DashboardOutlined />}>
+      <Menu
+        menuItemStyles={{
+          button: ({ active }) => {
+            return {
+              backgroundColor: active
+                ? theme.palette.neutral.medium
+                : theme.palette.neutral.light,
+            };
+          },
+        }}
+      >
+        <MenuItem
+          active={location.pathname === "/"}
+          component={<Link to={"/"} />}
+          icon={<DashboardOutlined />}
+        >
           <Typography variant="body2">Dashboard</Typography>
         </MenuItem>
-        <MenuItem active icon={<SourceOutlined />}>
+        <MenuItem
+          active={location.pathname === "/content"}
+          component={<Link to={"/content"} />}
+          icon={<SourceOutlined />}
+        >
           <Typography variant="body2">Content</Typography>
         </MenuItem>
-        <MenuItem active icon={<AnalyticsOutlined />}>
+        <MenuItem
+          active={location.pathname === "/analytics"}
+          component={<Link to={"/analytics"} />}
+          icon={<AnalyticsOutlined />}
+        >
           <Typography variant="body2">Analytics</Typography>
         </MenuItem>
-        <MenuItem active icon={<StyleOutlined />}>
+        <MenuItem
+          active={location.pathname === "/customization"}
+          component={<Link to={"/customization"} />}
+          icon={<StyleOutlined />}
+        >
           <Typography variant="body2">Customization</Typography>
         </MenuItem>
       </Menu>

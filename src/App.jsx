@@ -7,6 +7,8 @@ import theme from "./config/theme";
 import Sidenav from "./components/Sidenav";
 import AppHeader from "./components/AppHeader";
 import { useState } from "react";
+import { BrowserRouter } from "react-router-dom";
+import AppRoutes from "./router/AppRoutes";
 
 function App() {
   const [collapsedSidebar, setCollapsedSidebar] = useState(false);
@@ -19,11 +21,15 @@ function App() {
           setCollapsedSidebar={setCollapsedSidebar}
         />
         <Box sx={styles.container}>
-          <Sidenav
-            collapsedSidebar={collapsedSidebar}
-            setCollapsedSidebar={setCollapsedSidebar}
-          />
-          <Box component={"main"}></Box>
+          <BrowserRouter>
+            <Sidenav
+              collapsedSidebar={collapsedSidebar}
+              setCollapsedSidebar={setCollapsedSidebar}
+            />
+            <Box component={"main"}>
+              <AppRoutes />
+            </Box>
+          </BrowserRouter>
         </Box>
       </CssBaseline>
     </ThemeProvider>
