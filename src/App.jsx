@@ -26,7 +26,7 @@ function App() {
               collapsedSidebar={collapsedSidebar}
               setCollapsedSidebar={setCollapsedSidebar}
             />
-            <Box component={"main"}>
+            <Box component={"main"} sx={styles.mainSection}>
               <AppRoutes />
             </Box>
           </BrowserRouter>
@@ -42,6 +42,12 @@ const styles = {
     display: "flex",
     bgcolor: "neutral.light",
     height: "calc(100vh - 64px)",
+  },
+  mainSection: {
+    p: 4,
+    width: "100%",
+    height: "100%",
+    overflow: "auto",
   },
 };
 
