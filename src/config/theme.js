@@ -24,6 +24,12 @@ let theme = createTheme({
 
 theme = createTheme(theme, {
   typography: {
+    logo: {
+      fontFamily: ["Nunito Sans", "sans-serif"].join(","),
+      fontWeight: 700,
+      color: "white",
+      fontSize: 24
+    },
     link: {
       fontSize: "0.8rem",
       [theme.breakpoints.up("md")]: {
