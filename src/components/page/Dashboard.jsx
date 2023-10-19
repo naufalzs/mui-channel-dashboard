@@ -43,7 +43,7 @@ const styles = {
     maxWidth: "1400px",
   },
   cardSpacing: {
-    ":not(:first-child)": {
+    ":not(:first-of-type)": {
       mt: 2,
     },
   },
