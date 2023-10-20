@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom";
-import Dashboard from "../components/Page/Dashboard";
-import Content from "../components/Page/Content";
-import Analytics from "../components/Page/Analytics";
-import Customization from "../components/Page/Customization";
+import Dashboard from "../components/Dashboard/Index";
+import Content from "../components/Content/Index";
+import Analytics from "../components/Analytics/Index";
+import Customization from "../components/Customization/Index";
 
 function AppRoutes() {
   return (
