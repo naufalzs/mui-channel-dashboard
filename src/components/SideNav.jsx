@@ -4,13 +4,26 @@ import {
   SourceOutlined,
   StyleOutlined,
 } from "@mui/icons-material";
-import { Avatar, Box, Typography, useTheme } from "@mui/material";
+import {
+  Avatar,
+  Box,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import { Menu, MenuItem, Sidebar } from "react-pro-sidebar";
 import { Link, useLocation } from "react-router-dom";
 
-export default function Sidenav({ collapsedSidebar, setCollapsedSidebar }) {
+export default function Sidenav({
+  collapsedSidebar,
+  setCollapsedSidebar,
+  toggleSidebar,
+  setToggleSidebar,
+}) {
   const theme = useTheme();
   const location = useLocation();
+
+  const isMobile = useMediaQuery((theme) => theme.breakpoints.down("sm"));
 
   return (
     <Sidebar
@@ -21,8 +34,12 @@ export default function Sidenav({ collapsedSidebar, setCollapsedSidebar }) {
       breakPoint="md"
       backgroundColor={theme.palette.neutral.light}
       collapsed={collapsedSidebar}
-      toggled={!collapsedSidebar}
-      onBackdropClick={() => setCollapsedSidebar(!collapsedSidebar)}
+      toggled={toggleSidebar}
+      onBackdropClick={() =>
+        isMobile
+          ? setToggleSidebar(!toggleSidebar)
+          : setCollapsedSidebar(!collapsedSidebar)
+      }
     >
       <Box style={styles.avatarContainer}>
         <Avatar
@@ -40,6 +57,7 @@ export default function Sidenav({ collapsedSidebar, setCollapsedSidebar }) {
         )}
       </Box>
       <Menu
+        onClick={() => setToggleSidebar(!toggleSidebar)}
         menuItemStyles={{
           button: ({ active }) => {
             return {

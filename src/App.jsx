@@ -12,6 +12,7 @@ import AppRoutes from "./router/AppRoutes";
 
 function App() {
   const [collapsedSidebar, setCollapsedSidebar] = useState(false);
+  const [toggleSidebar, setToggleSidebar] = useState(false);
 
   return (
     <ThemeProvider theme={theme}>
@@ -19,12 +20,16 @@ function App() {
         <AppHeader
           collapsedSidebar={collapsedSidebar}
           setCollapsedSidebar={setCollapsedSidebar}
+          toggleSidebar={toggleSidebar}
+          setToggleSidebar={setToggleSidebar}
         />
         <Box sx={styles.container}>
           <BrowserRouter>
             <Sidenav
               collapsedSidebar={collapsedSidebar}
               setCollapsedSidebar={setCollapsedSidebar}
+              toggleSidebar={toggleSidebar}
+              setToggleSidebar={setToggleSidebar}
             />
             <Box component={"main"} sx={styles.mainSection}>
               <AppRoutes />

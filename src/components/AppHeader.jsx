@@ -13,10 +13,18 @@ import {
   MenuItem,
   Toolbar,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
 import { useState } from "react";
 
-export default function AppHeader({ collapsedSidebar, setCollapsedSidebar }) {
+export default function AppHeader({
+  collapsedSidebar,
+  setCollapsedSidebar,
+  toggleSidebar,
+  setToggleSidebar,
+}) {
+  const isMobile = useMediaQuery((theme) => theme.breakpoints.down("sm"));
+
   const [anchorEl, setAnchorEl] = useState(null);
   const isMenuOpen = !!anchorEl;
 
@@ -30,7 +38,11 @@ export default function AppHeader({ collapsedSidebar, setCollapsedSidebar }) {
       <Toolbar>
         <IconButton
           color="secondary"
-          onClick={() => setCollapsedSidebar(!collapsedSidebar)}
+          onClick={() =>
+            isMobile
+              ? setToggleSidebar(!toggleSidebar)
+              : setCollapsedSidebar(!collapsedSidebar)
+          }
         >
           <MenuTwoTone />
         </IconButton>
