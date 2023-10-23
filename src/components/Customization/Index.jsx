@@ -7,16 +7,19 @@ const CardCustomization = ({ icon, title, desc }) => (
   <Box sx={styles.rowContainer}>
     {icon}
     <Box sx={styles.secondColumn}>
-      <Typography variant="h6">{title}</Typography>
-      <Typography variant="h7" color="neutral.normal">
+      <Typography variant="h6" sx={styles.title}>
+        {title}
+      </Typography>
+      <Typography
+        variant="h7"
+        component="p"
+        color="neutral.normal"
+        sx={styles.desc}
+      >
         {desc}
       </Typography>
     </Box>
-    <Typography
-      variant="link"
-      textTransform={"uppercase"}
-      sx={{ ml: "auto" }}
-    >
+    <Typography variant="link" textTransform={"uppercase"} sx={{ ml: "auto" }}>
       Add
     </Typography>
   </Box>
@@ -98,4 +101,8 @@ const styles = {
   secondColumn: {
     ml: 1,
   },
+  title: {
+    lineHeight: { xs: 1.2, sm: 1.6 },
+  },
+  desc: { mt: { xs: 1, sm: 0 }, mr: 2 },
 };
