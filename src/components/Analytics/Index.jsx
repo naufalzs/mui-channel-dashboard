@@ -4,6 +4,8 @@ import { Box, Divider, Tab, Tabs, Typography } from "@mui/material";
 import TabPanel from "../TabPanel";
 import OverviewChart from "./OverviewChart";
 import RealtimeChart from "./RealtimeChart";
+import LatestVideoCard from "../Dashboard/LatestVideoCard";
+import TopVideoList from "./TopVideoList";
 
 export default function Analytics() {
   const [currentTab, setCurrentTab] = useState(0);
@@ -31,9 +33,11 @@ export default function Analytics() {
               </Typography>
               <OverviewChart />
               <Divider sx={styles.Divider} />
+              <TopVideoList />
             </Box>
             <Box>
               <RealtimeChart />
+              <LatestVideoCard />
             </Box>
           </Box>
         </TabPanel>
