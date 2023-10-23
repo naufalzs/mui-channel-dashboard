@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import LatestVideoCard from "./LatestVideoCard";
+import LatestVideoCard from "../LatestVideoCard";
 import LatestPost from "./LatestPost";
 import ChannelAnalytics from "./ChannelAnalytics";
 import LatestComment from "./LatestComment";

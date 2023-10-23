@@ -4,7 +4,7 @@ import { Box, Divider, Tab, Tabs, Typography } from "@mui/material";
 import TabPanel from "../TabPanel";
 import OverviewChart from "./OverviewChart";
 import RealtimeChart from "./RealtimeChart";
-import LatestVideoCard from "../Dashboard/LatestVideoCard";
+import LatestVideoCard from "../LatestVideoCard";
 import TopVideoList from "./TopVideoList";
 
 export default function Analytics() {

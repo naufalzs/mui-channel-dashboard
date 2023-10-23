@@ -51,6 +51,9 @@ export default function LatestPost() {
           <Grid item xs={6}>
             <Typography variant="h6">12</Typography>
           </Grid>
+          <Grid item xs={6}>
+            <Typography variant="h6">6</Typography>
+          </Grid>
         </Grid>
         <Typography variant="link" textTransform={"uppercase"}>
           go to community tab
