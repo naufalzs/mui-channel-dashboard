@@ -13,22 +13,8 @@ export default function LatestPost() {
     <Card>
       <CardContent>
         <Typography variant="cardTitle">Latest Post</Typography>
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            gap: 1,
-            my: 3,
-          }}
-        >
-          <Avatar
-            src="/src/assets/avatars/naufal.png"
-            sx={{
-              width: "30px",
-              height: "auto",
-              border: "1px solid #000",
-            }}
-          />
+        <Box sx={styles.postHeaderContainer}>
+          <Avatar src="/src/assets/avatars/naufal.png" sx={styles.postAvatar} />
           <Typography variant="h7" sx={{ color: "neutral.normal" }}>
             Coding with Naufal
           </Typography>
@@ -62,3 +48,18 @@ export default function LatestPost() {
     </Card>
   );
 }
+
+/** @type {import("@mui/material").SxProps} */
+const styles = {
+  postHeaderContainer: {
+    display: "flex",
+    alignItems: "center",
+    gap: 1,
+    my: 3,
+  },
+  postAvatar: {
+    width: "30px",
+    height: "auto",
+    border: "1px solid #000",
+  },
+};
