@@ -76,7 +76,12 @@ export default function OverviewChart() {
 
   return (
     <Box sx={styles.container}>
-      <Tabs value={currentTab} onChange={handleTabs}>
+      <Tabs
+        value={currentTab}
+        onChange={handleTabs}
+        sx={styles.tabs}
+        variant="scrollable"
+      >
         <Tab component={ViewsTabHead} id="tab-0" />
         <Tab component={WatchTimeTabHead} id="tab-1" />
         <Tab component={SubscriberTabHead} id="tab-2" />
@@ -95,7 +100,13 @@ export default function OverviewChart() {
 const styles = {
   container: {
     mt: 4,
-    width: "100%",
+    width: { xs: 300, sm: "100%" },
+    overflow: "auto",
+  },
+  tabs: {
+    ".MuiTabs-flexContainer": {
+      minWidth: 400,
+    },
   },
   mainChart: {
     height: 250,

@@ -20,7 +20,13 @@ export default function Analytics() {
         Content
       </Typography>
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-        <Tabs value={currentTab} onChange={handleTabs}>
+        <Tabs
+          value={currentTab}
+          onChange={handleTabs}
+          variant="scrollable"
+          scrollButtons={true}
+          allowScrollButtonsMobile
+        >
           {["Overview", "Content", "Audience", "Revenue"].map((e, i) => (
             <Tab key={i} label={e} id={`tab-${i}`} disabled={i !== 0} />
           ))}

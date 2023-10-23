@@ -53,33 +53,37 @@ export default function TopVideoList() {
   return (
     <Box sx={styles.container}>
       <Typography variant="h6">Your top content in this period</Typography>
-      <TableContainer sx={styles.tableContainer} component={Paper}>
-        <Table>
-          <TableHead>
-            <TableRow>
-              <TableCell>Content</TableCell>
-              <TableCell align="right">Average View Duration</TableCell>
-              <TableCell align="right">Views</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {topVideoList.map((video) => (
-              <TableRow key={video.id}>
-                <TableCell sx={styles.contentCell}>
-                  <Box
-                    component="img"
-                    src={video.thumbnail}
-                    sx={styles.videoThumbnail}
-                  />
-                  {video.title}
-                </TableCell>
-                <TableCell align="right">{video.averageViewDuration}</TableCell>
-                <TableCell align="right">{video.views}</TableCell>
+      <Box sx={{ overflow: "auto" }}>
+        <TableContainer sx={styles.tableContainer} component={Paper}>
+          <Table sx={styles.table}>
+            <TableHead>
+              <TableRow>
+                <TableCell >Content</TableCell>
+                <TableCell align="right">Average View Duration</TableCell>
+                <TableCell align="right">Views</TableCell>
               </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
+            </TableHead>
+            <TableBody>
+              {topVideoList.map((video) => (
+                <TableRow key={video.id}>
+                  <TableCell sx={styles.contentCell}>
+                    <Box
+                      component="img"
+                      src={video.thumbnail}
+                      sx={styles.videoThumbnail}
+                    />
+                    {video.title}
+                  </TableCell>
+                  <TableCell align="right">
+                    {video.averageViewDuration}
+                  </TableCell>
+                  <TableCell align="right">{video.views}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </Box>
     </Box>
   );
 }
@@ -87,14 +91,20 @@ export default function TopVideoList() {
 /** @type {import("@mui/material").SxProps} */
 const styles = {
   container: {
-    width: "100%",
     mt: 4,
     textAlign: "center",
   },
   tableContainer: {
     mt: 8,
+    width: "100%",
+    display: "table",
+    tableLayout: "fixed",
+  },
+  table: {
+    bgcolor: "white",
   },
   contentCell: {
+    minWidth: 300,
     display: "flex",
     alignItems: "center",
   },

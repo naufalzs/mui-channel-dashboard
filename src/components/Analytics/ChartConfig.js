@@ -54,7 +54,7 @@ export const mainChartOptions = {
         display: false,
       },
       ticks: {
-        maxTicksLimit: 3,
+        maxTicksLimit: 4,
         align: "inner",
       },
     },
