@@ -16,12 +16,16 @@
     "@mui/icons-material": "^5.14.13",
     "@mui/material": "^5.14.13",
     "@mui/x-data-grid": "^6.16.2",
+    "@types/chart.js": "^2.9.39",
+    "chart.js": "^4.4.0",
     "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
     "react-pro-sidebar": "^1.1.0-alpha.1",
     "react-router-dom": "^6.17.0"
   },
   "devDependencies": {
+    "@faker-js/faker": "^8.2.0",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react": "^4.0.3",
