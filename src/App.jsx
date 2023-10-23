@@ -4,11 +4,11 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import theme from "./config/theme";
-import Sidenav from "./components/Sidenav";
 import AppHeader from "./components/AppHeader";
 import { useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import AppRoutes from "./router/AppRoutes";
+import SideNavigation from "./components/SideNavigation";
 
 function App() {
   const [collapsedSidebar, setCollapsedSidebar] = useState(false);
@@ -25,7 +25,7 @@ function App() {
         />
         <Box sx={styles.container}>
           <BrowserRouter>
-            <Sidenav
+            <SideNavigation
               collapsedSidebar={collapsedSidebar}
               setCollapsedSidebar={setCollapsedSidebar}
               toggleSidebar={toggleSidebar}

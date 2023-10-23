@@ -14,7 +14,7 @@ import {
 import { Menu, MenuItem, Sidebar } from "react-pro-sidebar";
 import { Link, useLocation } from "react-router-dom";
 
-export default function Sidenav({
+export default function SideNavigation({
   collapsedSidebar,
   setCollapsedSidebar,
   toggleSidebar,
