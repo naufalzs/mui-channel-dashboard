@@ -4,12 +4,12 @@ import { Box, Button, Typography } from "@mui/material";
 const AnalyticsTabHead = forwardRef(
   ({ title, value, icon, subtitle, children, onClick }, ref) => (
     <Button ref={ref} onClick={onClick} sx={styles.container}>
-      <Typography sx={styles.tabTitle}>{title}</Typography>
+      <Typography sx={styles.title}>{title}</Typography>
       <Box sx={styles.tabValueRow}>
         <Typography sx={styles.tabValue}>{value}</Typography>
         {icon}
       </Box>
-      <Typography sx={styles.tabSubTitle}>{subtitle}</Typography>
+      <Typography sx={styles.subtitle}>{subtitle}</Typography>
       {children}
     </Button>
   )
@@ -48,6 +48,6 @@ const styles = {
     fontSize: "0.6rem",
     fontStyle: "italic",
     textTransform: "lowercase",
-    display: { xs: "none", md: "inline" },
+    display: { xs: "none", sm: "inline" },
   },
 };

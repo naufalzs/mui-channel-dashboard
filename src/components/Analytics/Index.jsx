@@ -3,6 +3,7 @@ import { Box, Divider, Tab, Tabs, Typography } from "@mui/material";
 
 import TabPanel from "../TabPanel";
 import OverviewChart from "./OverviewChart";
+import RealtimeChart from "./RealtimeChart";
 
 export default function Analytics() {
   const [currentTab, setCurrentTab] = useState(0);
@@ -31,7 +32,9 @@ export default function Analytics() {
               <OverviewChart />
               <Divider sx={styles.Divider} />
             </Box>
-            <Box></Box>
+            <Box>
+              <RealtimeChart />
+            </Box>
           </Box>
         </TabPanel>
       </Box>
@@ -43,5 +46,17 @@ export default function Analytics() {
 const styles = {
   pageTitle: {
     mb: 2,
+  },
+  overviewContainer: {
+    display: "grid",
+    gridTemplateColumns: { md: "1fr", lg: "1fr 300px" },
+    gap: 2,
+    justifyContent: "center",
+  },
+  statsContainer: {
+    bgcolor: "neutral.light",
+    display: "flex",
+    alignItems: "center",
+    flexDirection: "column",
   },
 };
