@@ -13,7 +13,7 @@ import {
 const topVideoList = [
   {
     id: 1,
-    thumbnail: "src/assets/thumbnail3.jpeg",
+    thumbnail: "assets/thumbnail3.jpeg",
     title: "Black Holes 101 | National Geographic",
     description:
       "Explore the fascinating world of black holes, from their formation to their mysterious properties. Learn about the latest discoveries in astrophysics and the mind-boggling phenomena that occur near these cosmic giants.",
@@ -25,7 +25,7 @@ const topVideoList = [
   },
   {
     id: 2,
-    thumbnail: "src/assets/thumbnail4.jpeg",
+    thumbnail: "assets/thumbnail4.jpeg",
     title: "Adventures in Switzerland: Exploring Paradise",
     description:
       "Join us on a breathtaking journey through the stunning landscapes and vibrant culture of Bali, Indonesia. From pristine beaches to lush rice terraces, this travel vlog captures the essence of this tropical paradise.",
@@ -37,7 +37,7 @@ const topVideoList = [
   },
   {
     id: 3,
-    thumbnail: "src/assets/thumbnail5.jpeg",
+    thumbnail: "assets/thumbnail5.jpeg",
     title: "Delicious Homemade Pizza Recipe",
     description:
       "Discover the secrets to making mouthwatering homemade pizza from scratch. This step-by-step tutorial covers everything from crafting the perfect pizza dough to selecting the freshest ingredients and achieving a crispy, cheesy masterpiece.",

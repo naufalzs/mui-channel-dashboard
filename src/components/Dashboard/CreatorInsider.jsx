@@ -8,7 +8,7 @@ export default function CreatorInsider() {
         <Box
           my={1}
           component="img"
-          src="src/assets/thumbnail2.png"
+          src="assets/thumbnail2.png"
           width="100%"
         />
         <Typography variant="h6" fontSize={"0.9rem"} sx={{ my: 2 }}>

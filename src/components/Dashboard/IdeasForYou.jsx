@@ -16,7 +16,7 @@ export default function IdeasForYou() {
           <Box
             ml={4}
             component={"img"}
-            src="src/assets/study-icon.png"
+            src="assets/study-icon.png"
             width={80}
           />
         </Box>

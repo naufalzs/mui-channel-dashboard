@@ -14,7 +14,7 @@ export default function LatestPost() {
       <CardContent>
         <Typography variant="cardTitle">Latest Post</Typography>
         <Box sx={styles.postHeaderContainer}>
-          <Avatar src="/src/assets/avatars/naufal.png" sx={styles.postAvatar} />
+          <Avatar src="/assets/avatars/naufal.png" sx={styles.postAvatar} />
           <Typography variant="h7" sx={{ color: "neutral.normal" }}>
             Coding with Naufal
           </Typography>

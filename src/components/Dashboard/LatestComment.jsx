@@ -18,7 +18,7 @@ export default function LatestComment() {
     <Box>
       <Box mt={2} sx={styles.commentContainer}>
         <Box sx={styles.commentTextContainer}>
-          <Avatar src="src/assets/avatars/naufal.png" sx={styles.avatar} />
+          <Avatar src="assets/avatars/naufal.png" sx={styles.avatar} />
           <Box ml={1} mr={2}>
             <Box mb={0.5} sx={styles.commentHeaderContainer}>
               <Typography
@@ -43,7 +43,7 @@ export default function LatestComment() {
         </Box>
         <Box
           component={"img"}
-          src="src/assets/thumbnail.png"
+          src="assets/thumbnail.png"
           sx={{ width: 80 }}
         />
       </Box>

@@ -43,7 +43,7 @@ export default function SideNavigation({
     >
       <Box style={styles.avatarContainer}>
         <Avatar
-          src="src/assets/avatars/naufal.png"
+          src="assets/avatars/naufal.png"
           alt="Naufal Channel"
           sx={styles.avatar}
         />

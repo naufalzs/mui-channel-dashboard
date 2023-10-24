@@ -7,7 +7,7 @@ import { DataGrid } from "@mui/x-data-grid";
 const videos = [
   {
     id: 1,
-    thumbnail: "src/assets/thumbnail.png",
+    thumbnail: "assets/thumbnail.png",
     title: "React Search Bar with Suggestion",
     description:
       "How to create react search bar with auto suggestion, seamlessly, smoothly, and easily",
@@ -18,7 +18,7 @@ const videos = [
   },
   {
     id: 2,
-    thumbnail: "src/assets/thumbnail2.png",
+    thumbnail: "assets/thumbnail2.png",
     title: "How to use Chat GPT (Subscriber Only)",
     description:
       "Learn how to unlock Chat GPT secret word. Unlock your potential, get easier life with AI in your life",
@@ -32,7 +32,7 @@ const videos = [
 const posts = [
   {
     id: 1,
-    thumbnail: "src/assets/thumbnail3.jpeg",
+    thumbnail: "assets/thumbnail3.jpeg",
     title: "Black Holes 101 | National Geographic",
     description:
       "Explore the fascinating world of black holes, from their formation to their mysterious properties. Learn about the latest discoveries in astrophysics and the mind-boggling phenomena that occur near these cosmic giants.",
@@ -43,7 +43,7 @@ const posts = [
   },
   {
     id: 2,
-    thumbnail: "src/assets/thumbnail4.jpeg",
+    thumbnail: "assets/thumbnail4.jpeg",
     title: "Adventures in Switzerland: Exploring Paradise",
     description:
       "Join us on a breathtaking journey through the stunning landscapes and vibrant culture of Bali, Indonesia. From pristine beaches to lush rice terraces, this travel vlog captures the essence of this tropical paradise.",
@@ -54,7 +54,7 @@ const posts = [
   },
   {
     id: 3,
-    thumbnail: "src/assets/thumbnail5.jpeg",
+    thumbnail: "assets/thumbnail5.jpeg",
     title: "Delicious Homemade Pizza Recipe",
     description:
       "Discover the secrets to making mouthwatering homemade pizza from scratch. This step-by-step tutorial covers everything from crafting the perfect pizza dough to selecting the freshest ingredients and achieving a crispy, cheesy masterpiece.",

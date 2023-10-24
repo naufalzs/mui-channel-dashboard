@@ -9,7 +9,7 @@ export default function LatestVideoCard() {
           <Box
             sx={styles.latestVideoImg}
             component={"img"}
-            src="src/assets/thumbnail.png"
+            src="assets/thumbnail.png"
             alt="reactjs search bar"
           />
           <Typography sx={styles.latestVideoTitle}>
