@@ -1,8 +1,5 @@
-# React + Vite
+# MUI Channel Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+is a Material-UI (MUI) exploratory project that clones Youtube Studio. It is also developed using MUI Data Grid, React Router, React Pro Sidebar, and Chart.js. You can visit it at: 
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+https://youtube-studio-clone-nzs.vercel.app/
